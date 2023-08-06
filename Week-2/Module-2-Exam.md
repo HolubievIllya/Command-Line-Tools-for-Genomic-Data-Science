@@ -31,7 +31,7 @@
 #### Answer: 0 (samtools view athal_wu_0_A.bam | cut –f6 | grep –c ‘N’)
 
 #### Q11. How many sequences are in the genome file?
-#### Answer: 7@SQ (samtools view –H athal_wu_0_A.bam | grep –c “SN:”)
+#### Answer: 7 (samtools view –H athal_wu_0_A.bam | grep –c “SN:”)
 
 #### Q12. What is the length of the first file secuence in the genome file?
 #### Answer: 29923332 (samtools view –H athal_wu_0_A.bam | grep “SN:” | more)
@@ -40,10 +40,10 @@
 #### Answer: stampy (samtools view –H athal_wu_0_A.bam | grep “^@PG”)
 
 #### Q14. What is the read identifier (name) for the first alignment?
-#### Answer: GAii05_00 ()
+#### Answer: GAii05_0002:1:113:7822:3886#0 ()
 
 #### Q15. What is the start position of this read’s mate on the genome? Give this as ‘chrom:pos’ if the read was mapped, or ‘*” if unmapped.
-#### Answer: 11700332 ()
+#### Answer: Chr3:11700332 ()
 
 #### Q16. How many overlaps (each overlap is reported on one line) are reported?
 #### Answer: 3101 (bedtools intersect –abam athal_wu_0_A.region.bam –b athal_wu_0_A_annot.gtf –bed -wo > overlaps.bed)
@@ -52,7 +52,7 @@
 #### Answer: 2899 (cut –f22 overlaps.bed | sort –nrk1 > lengths)
 
 #### Q18. How many alignments overlap the annotations?
-#### Answer: 3103 (cut –f1-12 overlaps.bed | sort –u | wc -l)
+#### Answer: 3101 (cut –f1-12 overlaps.bed | sort –u | wc -l)
 
 #### Q19. Conversely, how many exons have reads mapped to them?
 #### Answer: 21 (cut –f13-21 overlaps.bed | sort –u | wc -l)
