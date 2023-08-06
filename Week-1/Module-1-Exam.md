@@ -10,9 +10,9 @@
 #### Q5. How many genes have a single splice variant?
 #### Answer: 3 (cut -f1 apple.genes | uniq  -c | grep -v " 1 " | wc -l)
 #### Q6. How many genes are there on the '+' strand?
-#### Answer: 2664 (sort -k 4 -k 1 apple.genes | grep "+" | wc -l)
+#### Answer: 2662 (sort -k 4 -k 1 apple.genes | grep "+" | wc -l)
 #### Q7. How many genes are there on the '-' strand?
-#### Answer: 2792 (sort -k 4 -k 1 apple.genes | grep "-" | wc -l)
+#### Answer: 2791 (sort -k 4 -k 1 apple.genes | grep "-" | wc -l)
 #### Q8. How many genes are there on chromosome chr1?
 #### Answer: 1624 (sort -k 4 -k 1 apple.genes | grep "chr1" | wc -l)
 #### Q9. How many genes are there on chromosome chr2?
